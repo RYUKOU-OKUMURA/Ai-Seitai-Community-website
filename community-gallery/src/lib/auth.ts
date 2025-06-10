@@ -1,7 +1,18 @@
 import { supabase } from './supabase'
 
-// Magic Link送信
+// Magic Link送信（開発用バイパス付き）
 export const sendMagicLink = async (email: string) => {
+  // 開発環境でダミー値の場合はバイパス
+  const isDummyConfig = process.env.NEXT_PUBLIC_SUPABASE_URL?.includes('dummy')
+  
+  if (isDummyConfig) {
+    // 開発用バイパス：短い待機時間でシミュレーション
+    await new Promise(resolve => setTimeout(resolve, 1000))
+    console.log(`[開発モード] Magic Linkを ${email} に送信しました（シミュレーション）`)
+    return { success: true }
+  }
+  
+  // 実際のSupabase処理
   const { error } = await supabase.auth.signInWithOtp({
     email,
     options: {

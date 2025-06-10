@@ -2,45 +2,53 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black">
       {/* ヘッダー */}
       <header className="bg-white/10 backdrop-blur-md border-b border-white/20 sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-br from-purple-400 to-pink-400 rounded-lg flex items-center justify-center">
+              <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-lg">G</span>
               </div>
-              <h1 className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+              <h1 className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
                 コミュニティギャラリー
               </h1>
             </div>
-            <Link 
-              href="/upload"
-              className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-purple-500/25"
-            >
-              ✨ 作品を投稿
-            </Link>
+            <div className="flex items-center space-x-4">
+              <Link 
+                href="/admin"
+                className="text-gray-300 hover:text-white text-sm font-medium transition-colors"
+              >
+                🛠️ 管理
+              </Link>
+              <Link 
+                href="/upload"
+                className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-blue-500/25"
+              >
+                ✨ 作品を投稿
+              </Link>
+            </div>
           </div>
         </div>
       </header>
 
       {/* ヒーローセクション */}
       <section className="relative py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-pink-500/20"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-gray-800/30 to-gray-900/30"></div>
         <div className="absolute inset-0">
-          <div className="absolute top-10 left-10 w-72 h-72 bg-purple-500/30 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-10 right-10 w-96 h-96 bg-pink-500/20 rounded-full blur-3xl animate-pulse delay-700"></div>
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-blue-500/20 rounded-full blur-3xl animate-pulse delay-300"></div>
+          <div className="absolute top-20 left-20 w-60 h-60 bg-blue-500/10 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-20 right-20 w-80 h-80 bg-cyan-500/8 rounded-full blur-3xl"></div>
+          <div className="absolute top-1/3 right-1/3 w-40 h-40 bg-gray-400/5 rounded-full blur-2xl"></div>
         </div>
         
         <div className="relative max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <h2 className="text-5xl md:text-7xl font-bold mb-6">
-            <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-white via-blue-200 to-cyan-200 bg-clip-text text-transparent">
               創作の
             </span>
             <br />
-            <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-cyan-200 via-blue-200 to-white bg-clip-text text-transparent">
               スパイラル
             </span>
           </h2>
@@ -54,7 +62,7 @@ export default function Home() {
             </button>
             <Link 
               href="/auth/login"
-              className="text-purple-300 hover:text-purple-200 font-medium transition-colors duration-300"
+              className="text-blue-300 hover:text-blue-200 font-medium transition-colors duration-300"
             >
               ログイン →
             </Link>
@@ -157,7 +165,7 @@ export default function Home() {
         </div>
 
         <div className="mt-16 flex justify-center">
-          <button className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 backdrop-blur-md hover:from-purple-500/30 hover:to-pink-500/30 text-white px-8 py-3 rounded-full font-medium transition-all duration-300 border border-white/20 hover:border-white/40 hover:scale-105">
+          <button className="bg-gradient-to-r from-gray-700/40 to-gray-800/40 backdrop-blur-md hover:from-blue-600/30 hover:to-cyan-600/30 text-white px-8 py-3 rounded-full font-medium transition-all duration-300 border border-white/20 hover:border-blue-400/40 hover:scale-105">
             ✨ もっと見る
           </button>
         </div>
@@ -169,7 +177,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div>
               <div className="flex items-center space-x-2 mb-4">
-                <div className="w-8 h-8 bg-gradient-to-br from-purple-400 to-pink-400 rounded-lg flex items-center justify-center">
+                <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-lg flex items-center justify-center">
                   <span className="text-white font-bold text-lg">G</span>
                 </div>
                 <span className="text-white font-bold text-xl">コミュニティギャラリー</span>
@@ -183,20 +191,20 @@ export default function Home() {
             <div>
               <h4 className="text-white font-semibold mb-4">コミュニティ</h4>
               <ul className="space-y-2 text-gray-400">
-                <li><a href="#" className="hover:text-purple-300 transition-colors">作品ガイドライン</a></li>
-                <li><a href="#" className="hover:text-purple-300 transition-colors">よくある質問</a></li>
-                <li><a href="#" className="hover:text-purple-300 transition-colors">お問い合わせ</a></li>
-                <li><a href="#" className="hover:text-purple-300 transition-colors">プライバシーポリシー</a></li>
+                <li><a href="#" className="hover:text-blue-300 transition-colors">作品ガイドライン</a></li>
+                <li><a href="#" className="hover:text-blue-300 transition-colors">よくある質問</a></li>
+                <li><a href="#" className="hover:text-blue-300 transition-colors">お問い合わせ</a></li>
+                <li><a href="#" className="hover:text-blue-300 transition-colors">プライバシーポリシー</a></li>
               </ul>
             </div>
             
             <div>
               <h4 className="text-white font-semibold mb-4">つながり</h4>
               <ul className="space-y-2 text-gray-400">
-                <li><a href="#" className="hover:text-purple-300 transition-colors">Discord コミュニティ</a></li>
-                <li><a href="#" className="hover:text-purple-300 transition-colors">Twitter</a></li>
-                <li><a href="#" className="hover:text-purple-300 transition-colors">Instagram</a></li>
-                <li><a href="#" className="hover:text-purple-300 transition-colors">ニュースレター</a></li>
+                <li><a href="#" className="hover:text-blue-300 transition-colors">Discord コミュニティ</a></li>
+                <li><a href="#" className="hover:text-blue-300 transition-colors">Twitter</a></li>
+                <li><a href="#" className="hover:text-blue-300 transition-colors">Instagram</a></li>
+                <li><a href="#" className="hover:text-blue-300 transition-colors">ニュースレター</a></li>
               </ul>
             </div>
           </div>

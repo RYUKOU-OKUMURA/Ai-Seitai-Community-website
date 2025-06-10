@@ -35,10 +35,26 @@ export default function UploadPage() {
     }
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    // 開発環境チェック
+    const isDummyConfig = process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME === 'dummy_cloud_name'
+    
+    if (isDummyConfig) {
+      // 開発用バイパス
+      console.log("[開発モード] 投稿データ:", { title, description, selectedFiles });
+      alert("✨ 投稿が完了しました！（開発モード）\n\n実際の投稿機能を使うには、Supabase・Cloudinaryの設定が必要です。");
+      
+      // フォームリセット
+      setTitle("");
+      setDescription("");
+      setSelectedFiles([]);
+      return;
+    }
+    
+    // 実際の投稿処理（後で実装）
     console.log("投稿データ:", { title, description, selectedFiles });
-    // ここでSupabaseに投稿する処理を実装
     alert("投稿機能は実装中です");
   };
 

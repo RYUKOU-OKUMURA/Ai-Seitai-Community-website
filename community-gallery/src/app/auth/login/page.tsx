@@ -125,6 +125,14 @@ export default function LoginPage() {
             招待制のサービスです。<br />
             アカウントをお持ちでない場合は管理者にお問い合わせください。
           </p>
+          {process.env.NEXT_PUBLIC_SUPABASE_URL?.includes('dummy') && (
+            <div className="mt-4 p-3 bg-blue-100 rounded-md">
+              <p className="text-xs text-blue-800">
+                🛠️ <strong>開発モード</strong><br />
+                任意のメールアドレスでログインをテストできます
+              </p>
+            </div>
+          )}
         </div>
 
         <div className="mt-6 text-center">
