@@ -12,7 +12,7 @@ export default function Home() {
                 <span className="text-white font-bold text-lg">G</span>
               </div>
               <h1 className="text-2xl font-bold text-slate-800">
-                コミュニティギャラリー
+                未完成ギャラリー
               </h1>
             </div>
             <div className="flex items-center space-x-4">
@@ -46,16 +46,12 @@ export default function Home() {
         <div className="relative max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <h2 className="text-5xl md:text-7xl font-bold mb-6">
             <span className="bg-gradient-to-r from-slate-700 via-slate-600 to-blue-600 bg-clip-text text-transparent">
-              創作の
-            </span>
-            <br />
-            <span className="bg-gradient-to-r from-blue-600 via-slate-600 to-slate-700 bg-clip-text text-transparent">
-              スパイラル
+              未完成ギャラリー
             </span>
           </h2>
           <p className="text-xl md:text-2xl text-slate-600 mb-8 leading-relaxed">
-            コミュニティメンバーの素敵な作品が、<br />
-            新しいインスピレーションを生み出していく
+            20点でもいいじゃない<br />
+            挑戦と成長を共有する場所
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <button className="bg-white/70 backdrop-blur-md hover:bg-white/90 text-slate-700 px-8 py-3 rounded-full font-medium transition-all duration-300 border border-slate-200 hover:border-slate-300 shadow-sm">
@@ -181,11 +177,11 @@ export default function Home() {
                 <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-lg flex items-center justify-center">
                   <span className="text-white font-bold text-lg">G</span>
                 </div>
-                <span className="text-slate-800 font-bold text-xl">コミュニティギャラリー</span>
+                <span className="text-slate-800 font-bold text-xl">未完成ギャラリー</span>
               </div>
               <p className="text-slate-600 leading-relaxed">
-                創作者同士がつながり、インスピレーションを共有する場所。
-                あなたの作品が新しい創作のスパイラルを生み出します。
+                完璧じゃなくても大丈夫。挑戦と成長を応援し合う、
+                温かいコミュニティです。
               </p>
             </div>
             
@@ -212,7 +208,7 @@ export default function Home() {
           
           <div className="border-t border-slate-200 mt-8 pt-8 text-center">
             <p className="text-slate-500 text-sm">
-              © 2024 コミュニティギャラリー. Made with ❤️ for creators.
+              © 2024 未完成ギャラリー. Made with ❤️ for creators.
             </p>
           </div>
         </div>
